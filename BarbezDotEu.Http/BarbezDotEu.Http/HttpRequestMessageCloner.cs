@@ -15,6 +15,9 @@ namespace BarbezDotEu.Http
     {
         /// <summary>
         /// Clones a given <see cref="HttpRequestMessage"/>.
+        /// 
+        /// Using this method helps avoiding a "The request message was already sent. Cannot send the same request message multiple times." InvalidOperationException.
+        /// 
         /// </summary>
         /// <remarks>
         /// Adapted from: https://stackoverflow.com/a/46026230
