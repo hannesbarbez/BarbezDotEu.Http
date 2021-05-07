@@ -1,2 +1,3 @@
 # BarbezDotEu.Http
-Base logic related to HTTP and HTTPS
+
+Contains very basic logic related (loosely) to HTTP and HTTPS.
