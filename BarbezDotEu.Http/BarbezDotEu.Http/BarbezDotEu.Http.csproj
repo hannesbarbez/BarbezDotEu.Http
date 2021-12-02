@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Hannes Barbez</Authors>
     <Company>Hannes Barbez</Company>
     <Title>BarbezDotEu.Http</Title>
     <Product>BarbezDotEu.Http</Product>
     <PackageId>BarbezDotEu.Http</PackageId>
     <Copyright>©2021 Hannes Barbez</Copyright>
-    <Version>1.0.0</Version>
+    <Version>2.0.0</Version>
     <Description>Contains additional generic logic related to HTTP and HTTPS, such as copying a request via the HttpRequestMessageCloner.</Description>
     <PackageTags>basic;http;request;cloner</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

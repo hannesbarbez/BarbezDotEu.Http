@@ -30,9 +30,6 @@ namespace BarbezDotEu.Http
                 Version = request.Version
             };
 
-            foreach (var option in request.Options)
-                clone.Options.TryAdd(option.Key, option.Value);
-
             foreach (var header in request.Headers)
                 clone.Headers.TryAddWithoutValidation(header.Key, header.Value);
 
