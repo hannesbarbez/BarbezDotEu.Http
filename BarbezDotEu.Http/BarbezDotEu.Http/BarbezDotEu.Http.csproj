@@ -7,7 +7,7 @@
     <Product>BarbezDotEu.Http</Product>
     <PackageId>BarbezDotEu.Http</PackageId>
     <Copyright>©2022 Hannes Barbez</Copyright>
-    <Version>2.1.0</Version>
+    <Version>2.1.1</Version>
     <Description>Contains additional generic logic related to HTTP and HTTPS, such as copying a request via the HttpRequestMessageCloner.</Description>
     <PackageTags>basic;http;request;cloner</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -18,6 +18,6 @@
     <RepositoryType>GIT</RepositoryType>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageIconUrl>https://i2.wp.com/barbez.eu/wp-content/uploads/2020/02/cropped-BarbezDotEu-logo-1.png?resize=64%2C64</PackageIconUrl>
-    <DebugSymbols>true</DebugSymbols>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 </Project>
