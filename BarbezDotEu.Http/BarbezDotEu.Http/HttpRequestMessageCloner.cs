@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Hannes Barbez. All rights reserved.
 // Licensed under the GNU General Public License v3.0
 
-using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -15,18 +14,17 @@ namespace BarbezDotEu.Http
     {
         /// <summary>
         /// Clones a given <see cref="HttpRequestMessage"/>.
-        /// 
-        /// Using this method helps avoiding a "The request message was already sent. Cannot send the same request message multiple times." InvalidOperationException.
-        /// 
         /// </summary>
         /// <remarks>
-        /// Adapted from: https://stackoverflow.com/a/46026230
+        /// Using this method helps avoiding a "The request message was already sent.
+        /// Cannot send the same request message multiple times." InvalidOperationException.
         /// </remarks>
-        public static async Task<HttpRequestMessage> Clone(HttpRequestMessage request)
+        public static async Task<HttpRequestMessage> Clone(this HttpRequestMessage request)
         {
+            // Adapted from: https://stackoverflow.com/a/46026230
             var clone = new HttpRequestMessage(request.Method, request.RequestUri)
             {
-                Content = await CloneHttpContent(request.Content),
+                Content = await request.Content.Clone(),
                 Version = request.Version
             };
 
@@ -39,12 +37,12 @@ namespace BarbezDotEu.Http
         /// <summary>
         /// Clones given <see cref="HttpContent"/>.
         /// </summary>
-        /// <remarks>
-        /// Adapted from: https://stackoverflow.com/a/46026230
-        /// </remarks>
-        private static async Task<HttpContent> CloneHttpContent(HttpContent content)
+        public static async Task<HttpContent> Clone(this HttpContent content)
         {
-            if (content == null) return null;
+            // Adapted from: https://stackoverflow.com/a/46026230
+            if (content == null)
+                return null;
+
             var memoryStream = new MemoryStream();
             await content.CopyToAsync(memoryStream);
             memoryStream.Position = 0;
