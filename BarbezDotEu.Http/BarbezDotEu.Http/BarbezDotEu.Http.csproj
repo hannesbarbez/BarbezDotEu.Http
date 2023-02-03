@@ -6,8 +6,8 @@
     <Title>BarbezDotEu.Http</Title>
     <Product>BarbezDotEu.Http</Product>
     <PackageId>BarbezDotEu.Http</PackageId>
-    <Copyright>©2022 Hannes Barbez</Copyright>
-    <Version>2.1.1</Version>
+    <Copyright>©2023 Hannes Barbez</Copyright>
+    <Version>2.2.0</Version>
     <Description>Additional generic logic related to HTTP and HTTPS, such as copying a request via the HttpRequestMessageCloner.</Description>
     <PackageTags>basic;http;request;cloner</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
