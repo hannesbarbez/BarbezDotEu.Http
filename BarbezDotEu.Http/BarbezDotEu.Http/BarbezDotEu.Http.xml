@@ -4,6 +4,79 @@
         <name>BarbezDotEu.Http</name>
     </assembly>
     <members>
+        <member name="T:BarbezDotEu.Http.EdgeMockingRequestHeaderCollection">
+            <summary>
+            Mocks headers that would've been sent typically by Microsoft Edge during the first half of 2021.
+            </summary>
+        </member>
+        <member name="F:BarbezDotEu.Http.EdgeMockingRequestHeaderCollection.UserAgent">
+            <summary>
+            Gets an Edge style user agent header.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.Http.EdgeMockingRequestHeaderCollection.AcceptHeaders">
+            <summary>
+            Gets Edge style accept headers.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.Http.EdgeMockingRequestHeaderCollection.AcceptLanguage">
+            <summary>
+            Gets an Edge style accept header.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.Http.EdgeMockingRequestHeaderCollection.Referrer">
+            <summary>
+            Gets an Edge style referrer header.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.Http.EdgeMockingRequestHeaderCollection.CacheControl">
+            <summary>
+            Gets an Edge style cache-control header.
+            </summary>
+        </member>
+        <member name="M:BarbezDotEu.Http.EdgeMockingRequestHeaderCollection.Prep(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Prepares a given <see cref="T:System.Net.Http.HttpRequestMessage"/> with headers sent typically by Microsoft Edge during the first half of 2021.
+            </summary>
+            <param name="httpRequestMessage">The <see cref="T:System.Net.Http.HttpRequestMessage"/> to adjust.</param>
+        </member>
+        <member name="P:BarbezDotEu.Http.EdgeMockingRequestHeaderCollection.Pragma">
+            <summary>
+            Gets an Edge style pragma header.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.Http.EdgeMockingRequestHeaderCollection.Others">
+            <summary>
+            Gets a collection of non-standard headers, including:
+            - Edge style do-not-track header;
+            - Edge style sec-fetch-site header;
+            - Edge style sec-fetch-mode header;
+            - Edge style sec-fetch-dest header.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.Http.EdgeMockingRequestHeaderCollection.Connection">
+            <summary>
+            Gets an Edge style connection header.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.Http.EdgeMockingRequestHeaderCollection.Host">
+            <summary>
+            Gets the hostname.
+            </summary>
+        </member>
+        <member name="M:BarbezDotEu.Http.EdgeMockingRequestHeaderCollection.#ctor(System.String,System.String)">
+            <summary>
+            Constructs a new <see cref="T:BarbezDotEu.Http.EdgeMockingRequestHeaderCollection"/>.
+            </summary>
+            <param name="referrer">The referrer to set.</param>
+            <param name="host">The value to set for the host header. Defaults to the domain of the referrer, if none provided.</param>
+        </member>
+        <member name="M:BarbezDotEu.Http.EdgeMockingRequestHeaderCollection.DetermineAndSetHost(System.String)">
+            <summary>
+            Determines and sets the value of the host header. Defaults to the domain of the referrer, if no meaningful host name is provided.
+            </summary>
+            <param name="host"></param>
+        </member>
         <member name="T:BarbezDotEu.Http.HttpRequestMessageCloner">
             <summary>
             Helper class for cloning <see cref="T:System.Net.Http.HttpRequestMessage"/>s.
