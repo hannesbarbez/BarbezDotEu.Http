@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BarbezDotEu.Http</name>
+    </assembly>
+    <members>
+        <member name="T:BarbezDotEu.Http.HttpRequestMessageCloner">
+            <summary>
+            Helper class for cloning <see cref="T:System.Net.Http.HttpRequestMessage"/>s.
+            </summary>
+        </member>
+        <member name="M:BarbezDotEu.Http.HttpRequestMessageCloner.Clone(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Clones a given <see cref="T:System.Net.Http.HttpRequestMessage"/>.
+            </summary>
+            <remarks>
+            Using this method helps avoiding a "The request message was already sent.
+            Cannot send the same request message multiple times." InvalidOperationException.
+            </remarks>
+        </member>
+        <member name="M:BarbezDotEu.Http.HttpRequestMessageCloner.Clone(System.Net.Http.HttpContent)">
+            <summary>
+            Clones given <see cref="T:System.Net.Http.HttpContent"/>.
+            </summary>
+        </member>
+        <member name="T:BarbezDotEu.Http.HttpUriExtensions">
+            <summary>
+            Misc. extensions pertaining to HTTP and URI
+            </summary>
+        </member>
+        <member name="M:BarbezDotEu.Http.HttpUriExtensions.GetAsHttpUri(System.String)">
+            <summary>
+            Gets a string representing an HTTP URI and returns it as an actual HTTP <see cref="T:System.Uri"/>.
+            </summary>
+            <param name="uri">The implicit HTTP URI.</param>
+            <returns>An HTTP <see cref="T:System.Uri"/>.</returns>
+        </member>
+    </members>
+</doc>
