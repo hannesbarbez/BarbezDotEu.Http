@@ -6,7 +6,7 @@ using System;
 namespace BarbezDotEu.Http
 {
     /// <summary>
-    /// Misc. extensions pertaining to HTTP and URI
+    /// Misc. extensions pertaining to HTTP and URI.
     /// </summary>
     public static class HttpUriExtensions
     {

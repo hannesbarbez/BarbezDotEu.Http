@@ -7,9 +7,9 @@
     <Product>BarbezDotEu.Http</Product>
     <PackageId>BarbezDotEu.Http</PackageId>
     <Copyright>©2023 Hannes Barbez</Copyright>
-    <Version>2.3.0</Version>
-    <Description>Additional generic logic related to HTTP and HTTPS, such as copying a request via the HttpRequestMessageCloner.</Description>
-    <PackageTags>basic;http;request;cloner</PackageTags>
+    <Version>2.4.0</Version>
+    <Description>Additional generic features related to HTTP and HTTPS. Contains extensions to HttpContent, and cloning an HttpRequestMessage via the HttpRequestMessageCloner.</Description>
+    <PackageTags>basic;http;request;cloner;HttpContent;HttpRequestMessage;extensions</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://barbez.eu</PackageProjectUrl>
@@ -17,7 +17,7 @@
     <RepositoryUrl>https://github.com/hannesbarbez/BarbezDotEu.Http</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageIconUrl>https://i2.wp.com/barbez.eu/wp-content/uploads/2020/02/cropped-BarbezDotEu-logo-1.png?resize=64%2C64</PackageIconUrl>
+    <PackageIconUrl>https://api.nuget.org/v3-flatcontainer/barbezdoteu.provider/7.0.0/icon</PackageIconUrl>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 </Project>
