@@ -7,7 +7,7 @@
     <Product>BarbezDotEu.Http</Product>
     <PackageId>BarbezDotEu.Http</PackageId>
     <Copyright>©2023 Hannes Barbez</Copyright>
-    <Version>2.4.0</Version>
+    <Version>2.4.1</Version>
     <Description>Additional generic features related to HTTP and HTTPS. Contains extensions to HttpContent, and cloning an HttpRequestMessage via the HttpRequestMessageCloner.</Description>
     <PackageTags>basic;http;request;cloner;HttpContent;HttpRequestMessage;extensions</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

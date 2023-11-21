@@ -10,14 +10,14 @@ using System.Net.Mime;
 namespace BarbezDotEu.Http
 {
     /// <summary>
-    /// Mocks headers that would've been sent typically by Microsoft Edge during the first half of 2021.
+    /// Mocks headers that would've been sent typically by Microsoft Edge during the last half of 2023.
     /// </summary>
     public class EdgeMockingRequestHeaderCollection
     {
         /// <summary>
         /// Gets an Edge style user agent header.
         /// </summary>
-        public const string UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 Edg/109.0.1518.70";
+        public const string UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0";
 
         /// <summary>
         /// Gets Edge style accept headers.
