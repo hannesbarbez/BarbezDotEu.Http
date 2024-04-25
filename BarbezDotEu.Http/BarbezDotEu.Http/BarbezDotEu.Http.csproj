@@ -6,9 +6,11 @@
     <Title>BarbezDotEu.Http</Title>
     <Product>BarbezDotEu.Http</Product>
     <PackageId>BarbezDotEu.Http</PackageId>
-    <Copyright>©2023 Hannes Barbez</Copyright>
-    <Version>2.4.1</Version>
-    <Description>Additional generic features related to HTTP and HTTPS. Contains extensions to HttpContent, and cloning an HttpRequestMessage via the HttpRequestMessageCloner.</Description>
+    <Copyright>©2024 Hannes Barbez</Copyright>
+    <Version>2.4.2</Version>
+    <Description>
+        Generic features related to HTTP and HTTPS. Contains extensions to HttpContent, and cloning an HttpRequestMessage via the HttpRequestMessageCloner.
+    </Description>
     <PackageTags>basic;http;request;cloner;HttpContent;HttpRequestMessage;extensions</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -17,7 +19,13 @@
     <RepositoryUrl>https://github.com/hannesbarbez/BarbezDotEu.Http</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageIconUrl>https://api.nuget.org/v3-flatcontainer/barbezdoteu.provider/7.0.0/icon</PackageIconUrl>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>ICON.png</PackageIcon>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
+    <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+        <None Include="..\..\ICON.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
 </Project>

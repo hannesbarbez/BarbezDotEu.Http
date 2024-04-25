@@ -1,5 +1,6 @@
 <a name='assembly'></a>
 # BarbezDotEu.Http
+Generic features related to HTTP and HTTPS. Contains extensions to HttpContent, and cloning an HttpRequestMessage via the HttpRequestMessageCloner.
 
 ## Contents
 
