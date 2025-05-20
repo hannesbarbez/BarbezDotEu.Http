@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Authors>Hannes Barbez</Authors>
     <Company>Hannes Barbez</Company>
     <Title>BarbezDotEu.Http</Title>
     <Product>BarbezDotEu.Http</Product>
     <PackageId>BarbezDotEu.Http</PackageId>
-    <Copyright>©2024 Hannes Barbez</Copyright>
-    <Version>2.5.0</Version>
+    <Copyright>©2025 Hannes Barbez</Copyright>
+    <Version>3.0.0</Version>
     <Description>
         Generic features related to HTTP and HTTPS. Contains extensions to HttpContent, and cloning an HttpRequestMessage via the HttpRequestMessageCloner.
     </Description>
