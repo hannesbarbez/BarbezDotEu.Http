@@ -25,7 +25,8 @@ namespace BarbezDotEu.Http
             var clone = new HttpRequestMessage(request.Method, request.RequestUri)
             {
                 Content = await request.Content.Clone(),
-                Version = request.Version
+                Version = request.Version,
+                VersionPolicy = request.VersionPolicy,
             };
 
             foreach (var header in request.Headers)

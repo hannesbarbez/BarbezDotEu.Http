@@ -1,23 +1,23 @@
 ﻿// Copyright (c) Hannes Barbez. All rights reserved.
 // Licensed under the GNU General Public License v3.0
 
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Net.Mime;
-
 namespace BarbezDotEu.Http
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Net.Http;
+    using System.Net.Http.Headers;
+    using System.Net.Mime;
+
     /// <summary>
     /// Mocks headers that would've been sent typically by Microsoft Edge during the last quarter of 2024.
     /// </summary>
-    public class EdgeMockingRequestHeaderCollection
+    public class EdgeMockingRequestHeaderCollectionForHttp1
     {
         /// <summary>
         /// Gets an Edge style user agent header.
         /// </summary>
-        public const string UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0";
+        public const string UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0";
 
         /// <summary>
         /// Gets Edge style accept headers.
@@ -87,30 +87,30 @@ namespace BarbezDotEu.Http
         public string Host { get; private set; }
 
         /// <summary>
-        /// Constructs a new <see cref="EdgeMockingRequestHeaderCollection"/>.
+        /// Constructs a new <see cref="EdgeMockingRequestHeaderCollectionForHttp2"/>.
         /// </summary>
         /// <param name="referrer">The referrer to set.</param>
         /// <param name="host">The value to set for the host header. Defaults to the domain of the referrer, if none provided.</param>
-        public EdgeMockingRequestHeaderCollection(string referrer, string host = null)
+        public EdgeMockingRequestHeaderCollectionForHttp1(string referrer, string host = null)
         {
-            var acceptHeaderJson = new MediaTypeWithQualityHeaderValue("application/json");
+            var acceptHeaderJson = new MediaTypeWithQualityHeaderValue(MediaTypeNames.Application.Json);
             var acceptHeaderText = new MediaTypeWithQualityHeaderValue(MediaTypeNames.Text.Plain);
             var acceptHeaderAnything = new MediaTypeWithQualityHeaderValue("*/*");
 
-            this.AcceptHeaders = new[] { acceptHeaderJson, acceptHeaderText, acceptHeaderAnything };
+            AcceptHeaders = [acceptHeaderJson, acceptHeaderText, acceptHeaderAnything];
             this.AcceptLanguage = new StringWithQualityHeaderValue("en-US", 0.9);
             this.Referrer = new Uri(referrer);
             this.CacheControl = new CacheControlHeaderValue() { NoCache = true };
             this.Pragma = new NameValueHeaderValue("pragma", "no-cache");
             this.Connection = "keep-alive";
 
-            this.Others = new KeyValuePair<string, string>[]
-            {
+            this.Others =
+            [
                 new KeyValuePair<string, string>("Sec-Fetch-Site","same-site"),
                 new KeyValuePair<string, string>("Sec-Fetch-Mode","cors"),
                 new KeyValuePair<string, string>("Sec-Fetch-Dest","empty"),
                 new KeyValuePair<string, string>("DNT","1"),
-            };
+            ];
 
             DetermineAndSetHost(host);
         }
