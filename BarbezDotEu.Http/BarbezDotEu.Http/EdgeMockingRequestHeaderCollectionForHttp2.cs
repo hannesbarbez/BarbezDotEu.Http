@@ -20,7 +20,7 @@ namespace BarbezDotEu.Http
         /// <remarks>
         /// Needs to align with SecChUa.
         /// </remarks>
-        public const string UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0";
+        public const string UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0";
 
         /// <summary>
         /// Gets the Edge style Sec-Ch-Ua header.
